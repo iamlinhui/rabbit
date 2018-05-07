@@ -1,0 +1,18 @@
+server:
+  port: 80
+
+logging:
+  level:
+    org: info
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1
+    listener:
+      simple:
+        acknowledge-mode: manual
+    cache:
+      connection:
+        mode: channel
+    publisher-confirms: true
+    publisher-returns: true
+
